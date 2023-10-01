@@ -8,13 +8,13 @@ on:
 
 jobs:
   deploy:
-    runs_on: ubuntu_latest
+    runs-on: ubuntu_latest
 
     steps:
     - name: Clone action
       uses: actions/checkout@v2
 
-    -name: SSH and Deploy
+    - name: SSH and Deploy
     env:
       SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       run: |
